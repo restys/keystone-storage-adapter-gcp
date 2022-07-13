@@ -20,7 +20,6 @@ var DEFAULT_OPTIONS = {
 	generateFilename: nameFunctions.randomFilename,
 	uploadParams: {},
 };
-// const bucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
 
 function ensureLeadingSlash (filename) {
 	return filename[0] !== '/' ? '/' + filename : filename;
