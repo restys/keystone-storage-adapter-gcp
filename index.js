@@ -11,7 +11,6 @@ var assign = require('object-assign');
 var debug = require('debug')('keystone-s3');
 var ensureCallback = require('keystone-storage-namefunctions/ensureCallback');
 var nameFunctions = require('keystone-storage-namefunctions');
-// var S3 = require('aws-sdk/clients/s3');
 const { Storage } = require('@google-cloud/storage');
 
 var DEFAULT_OPTIONS = {
