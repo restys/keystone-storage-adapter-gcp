@@ -209,7 +209,7 @@ GCPAdapter.prototype.getFileURL = function (file) {
 		file.bucket = bucket; // make sure bucket is available on the file
 		return this.options.publicUrl(file);
 	}
-	return `https://storage.cloud.google.com/${bucket}${absolutePath}`;
+	return `https://storage.googleapis.com/${bucket}${absolutePath}`;
 };
 
 GCPAdapter.prototype.removeFile = async function (file, callback) {
