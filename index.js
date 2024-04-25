@@ -18,6 +18,7 @@ var DEFAULT_OPTIONS = {
 	path: '/',
 	generateFilename: nameFunctions.randomFilename,
 	uploadParams: {},
+	resumable: false
 };
 
 function ensureLeadingSlash (filename) {
