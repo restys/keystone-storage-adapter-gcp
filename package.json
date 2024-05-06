@@ -1,6 +1,6 @@
 {
   "name": "keystone-storage-adapter-gcp",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "GCP storage adapter for keystonejs",
   "main": "index.js",
   "license": "MIT",
