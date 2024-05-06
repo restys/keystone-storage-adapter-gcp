@@ -17,8 +17,7 @@ var DEFAULT_OPTIONS = {
 	bucket: process.env.GCP_BUCKET,
 	path: '/',
 	generateFilename: nameFunctions.randomFilename,
-	uploadParams: {},
-	resumable: false
+	uploadParams: {}
 };
 
 function ensureLeadingSlash (filename) {
