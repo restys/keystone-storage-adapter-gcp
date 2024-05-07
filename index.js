@@ -144,20 +144,15 @@ GCPAdapter.prototype.uploadFile = function (file, callback) {
 			if (err) return callback(err);
 		});
 
-		// var params = assign({
-		// 	Key: removeLeadingSlash(absolutePath),
-		// 	Body: fileStream,
-		// 	Bucket: bucket,
-		// 	ContentType: mimetype,
-		// 	ContentLength: filesize,
-		// }, self.options.uploadParams);
-
-		await self.gcpClient.bucket(bucket).upload(localpath, {
-			destination: removeLeadingSlash(absolutePath),
-			metadata: {
-				contentType: mimetype,
-			},
-		});
+		const gcpFile = (await self.gcpClient.bucket(bucket).upload(localpath, {
+			destination: removeLeadingSlash(absolutePath)
+		}))[0]
+		
+		gcpFile.setMetadata(
+			{
+			  contentType: mimetype,
+			}
+		  );
 
 		debug(`${localpath} uploaded to ${bucket}`);
 
